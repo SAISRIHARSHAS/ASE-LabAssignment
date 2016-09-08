@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html ng-app="ServicesApp">
+
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <script src="SaveRegistrationData.js"></script>
+
+        <style>
+        table{
+            border-top-style: solid;
+            border-top-color: #000;
+            border-right-style: solid;
+            border-right-color: #000;
+            border-left-style: solid;
+            border-left-color: #000;
+            border-bottom-style: solid;
+            border-bottom-color: #000;
+            caption-side: top;
+            background-color: cornflowerblue;
+            align-self: center;
+            position: absolute;
+            top: 40%;
+            width: fit-content;
+            right: 40%;
+        }
+    </style>
+
+    </head>
+
+    <body ng-controller="RegistrationController">
+        <table>
+            <tr>
+                <td></td>
+                <td style="color: black"><b>Registration </b></td>
+            </tr>
+            <tr>
+                <td>
+                    FirstName: 
+                </td>
+                <td>
+                    <input type="text" ng-model="FirstName" id="firstname" placeholder="Please Enter The First Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    LastName: 
+                </td>
+                <td>
+                    <input type="text" ng-model="LastName" id="Lastname" placeholder="Please Enter The Last Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    EmailId: 
+                </td>
+                <td>
+                    <input type="text" ng-model="EmailId" id="Username" placeholder="Please Enter The EmailId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    UserName: 
+                </td>
+                <td>
+                    <input type="text" ng-model="UserName" id="Username" placeholder="Please Enter The user name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" ng-model="Password" id="password" placeholder="Please Enter The Password" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button ng-click="saveRegistrationData(FirstName,LastName,EmailId,UserName,Password,PhoneNumber)" value="Register">Register</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>
