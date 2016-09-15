@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mash up</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="Auth.js"></script>
+    <script src="login.js"></script>
+
+</head>
+<body style="background-image: url(http://www.ohmyindia.com/wp-content/uploads/2016/02/zomato-food-1024x548.jpg);">
+
+<div id='cssmenu'>
+    <ul>
+        <li><i><b><size="5">MASH UP</b>
+        <li><a href='#'><span>Home</span></a></li>
+        <li><a href='#'><span>ContactUs</span></a></li>
+
+    </ul>
+</div>
+<script src="//connect.facebook.net/en_US/all.js"></script>
+<div class="wrap">
+    <!-- strat-contact-form -->
+    <div class="contact-form">
+        <!-- start-form -->
+        <form class="contact_form" name="contact_form">
+            <h1>Login Into Your Account</h1>
+            <ul>
+                <li>
+                    <input type="email" class="username" id="username" placeholder="username"/>
+
+                    <p><img src="images/contact.png" alt=""></p>
+                </li>
+                <li>
+                    <input type="password"  class="password" id="password" placeholder="password">
+                    <p><img src="images/lock.png" alt=""></p>
+                </li>
+            </ul>
+            <input type="submit" name="Sign In" value="Sign In" onclick="validate()"/>
+            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember me</label>
+            <div class="forgot">
+                <a href="#">forgot password?</a>
+            </div>
+        </form>
+        <!-- end-form -->
+        <!-- start-account -->
+        <div class="account">
+            <h2><a href="#">Don't have an account? Sign Up Here using Facebook!</a></h2>
+            <br>
+            <br>
+            <div class="fb-login-button" data-max-rows="2" data-size="xlarge" data-show-faces="False" data-auto-logout-link="False"></div>
+
+
+            <div id="status">
+                <!-- end-account -->
+                <div class="clear"></div>
+            </div>
+            <!-- end-contact-form -->
+        </div>
+        <div id="fb-root"></div>
+
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1116418625102344";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
