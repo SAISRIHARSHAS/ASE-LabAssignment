@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MashUp App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <!-- <script src="script.js"></script>-->
+  <link rel="stylesheet" href="app.css">
+
+  <style>
+
+    .body{
+      position: absolute;
+      top: 10px;
+      left: 320px;
+      right: -40px;
+      bottom: -40px;
+      width: auto;
+      height: auto;
+      background-image: url(img/Screenshot_20160927-220819.png);
+      background-size: cover;
+      -webkit-filter: blur(0px);
+      z-index: 0;
+    }
+
+  </style>
+
+</head>
+
+<div  ng-controller="View1Ctrl" style="top: 200px">
+  <div class="menu" id="div_SearchContainer">
+    <h1 align="absolute">Shoppers - Now Search your foods anywhere!!</h1>
+    <input type="text" id="txt_placeName" placeholder="Select your location"/>
+    <input type="text" id="txt_searchFilter" placeholder="Select Your Favourite Items"/><br>
+    <button id="btn_getReview" ng-click="getVenues();getWeatherStart();">Get Directions</button>
+  </div>
+  <div id="div_VenueList">
+    <h2> Here are some best in town Restaurants to satisfy your Taste Buds </h2>
+    <ul style="font-size: x-large">
+
+
+      <li ng-repeat="venue in venueList">
+        <a  href="" ng-click="getReviews(venue)">{{venue.name}}</a>
+      </li>
+    </ul>
+
+  </div>
+  <div id="div_ReviewList" style="display:none;"  >
+
+
+    <p ng-model="ReviewWithSentiment">
+
+    <TABLE BORDER=2 CELLPADDING=4> <TR> <TH style="color: yellow" COLSPAN=2 BGCOLOR="#445533">Sentiment Analysis From Using Alchemy API </TH> </TR>
+      <TR> <TD> Most recent review</TD> <TD>{{ReviewWithSentiment.reviewText}}</TD> </TR>
+      <TR> <TD>Sentiment of the review</TD> <TD>{{ReviewWithSentiment.sentiment}}</TD> </TR>
+      <TR> <TD>Sentiment Score of the review</TD> <TD>{{ReviewWithSentiment.score}}</TD> </TR>+
+
+      <TR> <TH style="color: deepskyblue" COLSPAN=2 BGCOLOR="#f8f8ff">{{ReviewWithSentiment.reviewText}}</TH> </TR>
+    </TABLE>
+
+    </p>
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js">
+    </script>
+</body>
+</html>
