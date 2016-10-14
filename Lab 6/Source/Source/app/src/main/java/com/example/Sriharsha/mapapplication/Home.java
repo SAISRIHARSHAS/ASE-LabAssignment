@@ -1,4 +1,4 @@
-package com.example.sibi.mapapplication;
+package com.example.Sriharsha.mapapplication;
 
 import android.Manifest;
 import android.content.Context;
@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
 
-import static com.example.sibi.mapapplication.R.id.imageView2;
+import static com.example.Sriharsha.mapapplication.R.id.imageView2;
 
 
 public class Home extends FragmentActivity implements OnMapReadyCallback {

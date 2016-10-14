@@ -12,7 +12,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 /**
- * Created by sibi on 10/2/2016.
+ * Created by Sriharsha on 10/2/2016.
  */
 
 public class GPSTracker extends Service implements LocationListener {
